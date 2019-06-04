@@ -7,11 +7,16 @@ const mongoose = require("mongoose");
 const uri = require("./config/keys").mongoURI;
 const PORT = process.env.PORT || 8080;
 
+const users = require("./routes/api/users");
+
 const app = express();
 
 // BODY-PARSER
 app.use(bp.urlencoded({ extended: true }));
 app.use(bp.json());
+
+// ROUTES
+app.use("/api/users", users);
 
 // MONGODB
 mongoose.connect(uri, { useNewUrlParser: true})
