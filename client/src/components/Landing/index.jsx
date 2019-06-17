@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './styles.css';
 
+import Button from '../Button';
+
 class Landing extends Component {
   render() {
     return (
@@ -9,7 +11,7 @@ class Landing extends Component {
         <span className={'title'}>FRED CAM</span>
         <input className={'input'} placeholder={'Email'} />
         <input className={'input'} placeholder={'Password'} />
-        <button className={'button'}>Login</button>
+        <Button text={'Login'} />
         <span className={'sub-text'}>Forgot your password?</span>
         <div className={'divider'} />
         <span className={'sub-text'}>Don't have an account? Sign up</span>
