@@ -8,7 +8,7 @@ module.exports = {
     data.name = !isEmpty(data.name) ? data.name : "";
     data.email = !isEmpty(data.email) ? data.email : "";
     data.password = !isEmpty(data.password) ? data.password : "";
-    data.password2 = !isEmpty(data.confirm_password) ? data.confirm_password : "";
+    data.confirm_password = !isEmpty(data.confirm_password) ? data.confirm_password : "";
 
     // Name checks
     if (validator.isEmpty(data.name)) errors.name = "Name field is required";
