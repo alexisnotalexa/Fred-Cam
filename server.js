@@ -2,6 +2,7 @@
 const express = require("express");
 const bp = require("body-parser");
 const mongoose = require("mongoose");
+const passport = require("passport");
 
 // CONFIG
 const uri = require("./config/keys").mongoURI;
@@ -14,6 +15,12 @@ const app = express();
 // BODY-PARSER
 app.use(bp.urlencoded({ extended: true }));
 app.use(bp.json());
+
+// PASSPORT MIDDLEWARE
+app.use(passport.initialize());
+
+// PASSPORT CONFIG
+require("./config/passport")(passport);
 
 // ROUTES
 app.use("/api/users", users);
