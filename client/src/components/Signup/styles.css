@@ -2,17 +2,41 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: coral;
 }
 
-.signup--container {
+.signup--block {
   width: 90%;
   background: white;
   border-radius: 10px;
   box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
   padding: 25px 0;
+}
+
+.signup--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.back-btn {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+
+.back-btn--btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+.back-btn--arrow {
+  color: white;
+  font-size: 40px;
 }
 
 .title {
