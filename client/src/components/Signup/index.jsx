@@ -3,6 +3,7 @@ import './styles.css';
 
 import Button from '../Button';
 import Input from '../Input';
+import Logo from '../Logo';
 
 class Signup extends Component {
   renderBackBtn = () => {
@@ -17,17 +18,22 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className={'signup'}>
-        {this.renderBackBtn()}
-        <div className={'signup--container'}>
-          <div className={'signup--block'}>
-            <h1 className={'title'}>Create an account</h1>
-            <Input placeholder={'Name'} />
-            <Input placeholder={'Email'} />
-            <Input placeholder={'Password'} />
-            <Button text={'Sign Up'} />
+      <div className={'container'}>
+        <div className={'left'}>
+          <Logo />
+        </div>
+        <div className={'signup'}>
+          {this.renderBackBtn()}
+          <div className={'signup--container'}>
+            <div className={'signup--block'}>
+              <h1 className={'title'}>Create an account</h1>
+              <Input placeholder={'Name'} />
+              <Input placeholder={'Email'} />
+              <Input placeholder={'Password'} />
+              <Button text={'Sign Up'} />
+            </div>
+            <span className={'sub-text'}>Already have an account? Log in</span>
           </div>
-          <span className={'sub-text'}>Already have an account? Log in</span>
         </div>
       </div>
     );
