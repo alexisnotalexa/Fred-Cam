@@ -28,14 +28,17 @@
   border-radius: 50%;
 }
 
-.title {
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: 3px;
+.margin {
   margin: 1rem 0;
 }
 
 .sub-text {
   color: gray;
   font-size: 10px;
+}
+
+@media (min-width: 500px) {
+  .signup {
+    width: 500px;
+  }
 }

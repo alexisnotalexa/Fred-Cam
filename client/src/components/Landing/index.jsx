@@ -3,13 +3,14 @@ import './styles.css';
 
 import Button from '../Button';
 import Input from '../Input';
+import Logo from '../Logo';
 
 class Landing extends Component {
   render() {
     return (
       <div className={'landing'}>
         <div className={'img-placeholder'} />
-        <span className={'title'}>FRED CAM</span>
+        <Logo className={'margin'} />
         <div className={'signup'}>
           <Input placeholder={'Email'} />
           <Input placeholder={'Password'} />
