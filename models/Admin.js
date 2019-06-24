@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-module.exports = mongoose.model("users", 
+module.exports = mongoose.model("admins", 
   new Schema({
     name: {
       type: String,
@@ -14,14 +14,5 @@ module.exports = mongoose.model("users",
     password: {
       type: String,
       required: true
-    },
-    date: {
-      type: Date,
-      default: Date.now
-    },
-    status: {
-      type: String,
-      enum: ['NEW', 'APPROVED', 'DENIED'],
-      default: 'NEW'
     }
   }));
