@@ -8,6 +8,7 @@ const login = require("../../validation/login");
 const register = require("../../validation/register");
 
 const Admin = require("../../models/Admin");
+const User = require("../../models/User");
 
 router.post("/register", (req, res) => {
   const { errors, isValid } = register.validateRegisterInput(req.body);
@@ -82,7 +83,13 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/requests", (req, res) => {
-
+  User.find({ status: 'NEW' })
+    .then(users => {
+      return res.status(200).json({ users });
+    })
+    .catch(error => {
+      return res.status(400).json({ error });
+    });
 });
 
 router.post("/convert", (req, res) => {
